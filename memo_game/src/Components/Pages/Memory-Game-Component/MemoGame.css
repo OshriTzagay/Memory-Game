@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+.the-title {
+  font-size: 100px;
+  font-family: "Nosifer", cursive;
+  color: rgba(255, 0, 0, 0.489);
+}
+nav {
+  display: flex;
+  justify-content: start;
+}
+li {
+  list-style: none;
+  font-size: xx-large;
+  color: rgba(255, 0, 0, 0.489);
+}
+li :visited {
+  color: red;
+}
+.moves {
+  font-family: "Nosifer", cursive;
+    margin: 20px;
+    padding:10px;
+    color: gray;
+}
+.movesContainer{
+    display: flex;
+
+}
+
+.start-btn{
+font-size: x-large;
+width: 20vw;
+height: 10vh;
+background-color: black;
+color: gray;
+border-radius: 10ch;
+}
+
