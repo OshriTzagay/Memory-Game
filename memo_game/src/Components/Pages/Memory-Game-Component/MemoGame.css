@@ -4,6 +4,8 @@
   font-family: "Nosifer", cursive;
   color: rgba(255, 0, 0, 0.489);
 }
+
+
 nav {
   display: flex;
   justify-content: start;

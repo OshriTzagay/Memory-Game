@@ -3,7 +3,9 @@ import "./MemoGame.css";
 import { useState, useEffect,useRef } from "react";
 import { AiFillHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import ironman from '../../../../src/Ironman.png'
 import SingleCard from "../../Parts/SingleCard";
+import StopWatch from "../../Parts/StopWatch";
 
 const cardImages = [
   { src: "/marvel_imgs/Spiderman.png", matched: false },
@@ -23,7 +25,6 @@ function MemoGame() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
-  const [timer, setTimer] = useState(0);
 
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
@@ -32,10 +33,8 @@ function MemoGame() {
 
     setCards(shuffledCards);
     setTurns(0);
-    StopWatch();
     cardsRef.current.scrollIntoView({ behavior: "smooth" })
 
-    
   };
 
   //handle the choice.
@@ -77,13 +76,20 @@ function MemoGame() {
     }
     setDisabled(false);
   };
+  const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  var timer;
 
-  const StopWatch = () => {
-    setInterval(() => {
-      setTimer((timer) => timer + 1);
+  useEffect(() => {
+    timer = setInterval(() => {
+      setSeconds(seconds + 1);
+
+      if (seconds === 59) {
+        setSeconds(0);
+        setMinutes(minutes + 1);
+      }
     }, 1000);
- 
-  };
+  }, [seconds, minutes]);
   return (
     <div className="MemoGame">
       <nav>
@@ -94,10 +100,12 @@ function MemoGame() {
         </li>
       </nav>
       <h1 className="the-title">Memory Game</h1>
-      <p>You must complete this in less than 10 MOVES! </p>
+      <p>You must complete this in less than 10 MOVES & 5Minutes </p>
+        {/* <StopWatch className="moves"/> */}
       <div className="movesContainer">
         <h1 className="moves">Moves : {turns}</h1>
-        <h1 className="moves">Timer :00:00: {timer}</h1>
+        {/* <h1 className="moves"> Timer  {minutes}:{seconds}</h1> */}
+        <StopWatch/>
       </div>
       <button className="start-btn" herf="#cards" onClick={shuffleCards}>New Game</button>
 

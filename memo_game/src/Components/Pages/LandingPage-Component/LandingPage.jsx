@@ -20,7 +20,7 @@ export default function LandingPage() {
 
         <div className="right">
           <img src="https://wallpapermemory.com/uploads/575/marvel-background-hd-1280x800-322318.jpg" alt="" />
-      <Link to="/memogame"><button className="goMemoGame">Click To Start</button></Link>    
+      <Link to="/Memory-Game"><button className="goMemoGame">Click To Start</button></Link>    
         </div>
       </div>
     </div>
