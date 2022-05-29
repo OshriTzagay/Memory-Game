@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/Memory-Game/static/css/main.257ebcd5.css",
-    "main.js": "/Memory-Game/static/js/main.c61303e2.js",
+    "main.js": "/Memory-Game/static/js/main.dc5c37f6.js",
     "static/js/787.88ab9f7e.chunk.js": "/Memory-Game/static/js/787.88ab9f7e.chunk.js",
+    "static/media/Ironman.png": "/Memory-Game/static/media/Ironman.868807df12377786773d.png",
     "static/media/logo.svg": "/Memory-Game/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Memory-Game/index.html",
     "main.257ebcd5.css.map": "/Memory-Game/static/css/main.257ebcd5.css.map",
-    "main.c61303e2.js.map": "/Memory-Game/static/js/main.c61303e2.js.map",
+    "main.dc5c37f6.js.map": "/Memory-Game/static/js/main.dc5c37f6.js.map",
     "787.88ab9f7e.chunk.js.map": "/Memory-Game/static/js/787.88ab9f7e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.257ebcd5.css",
-    "static/js/main.c61303e2.js"
+    "static/js/main.dc5c37f6.js"
   ]
 }
