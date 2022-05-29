@@ -13,7 +13,7 @@ export default function SingleCard({ card, handleChoice, flipped, disabled }) {
         <img className="front" src={card.src} />
         <img
           className="back"
-          src="/marvel_imgs/MarvelLogo2.png"
+          src="http://OshriTzagay.github.io/Memory-Game/marvel_imgs/MarvelLogo2.png"
           onClick={handleClick}
           alt="some cover pic"
         />
