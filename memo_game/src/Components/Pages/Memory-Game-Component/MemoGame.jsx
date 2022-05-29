@@ -1,25 +1,42 @@
 // import "./App.css";
 import "./MemoGame.css";
-import { useState, useEffect,useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AiFillHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import ironman from '../../../../src/Ironman.png'
+import ironman from "../../../../src/Ironman.png";
 import SingleCard from "../../Parts/SingleCard";
 import StopWatch from "../../Parts/StopWatch";
 
 const cardImages = [
-  { src: "/marvel_imgs/Spiderman.png", matched: false },
-  { src: "/marvel_imgs/Hulk.png", matched: false },
-  { src: "/marvel_imgs/Ironman.png", matched: false },
-  { src: "/marvel_imgs/CaptainAmerica2.png", matched: false },
-  { src: "/marvel_imgs/Flash.png", matched: false },
-  { src: "/marvel_imgs/Deadpool.png", matched: false },
+  {
+    src: "http://OshriTzagay.github.io/Memory-Game/marvel_imgs/Spiderman.png",
+    matched: false,
+  },
+  {
+    src: "http://OshriTzagay.github.io/Memory-Game/marvel_imgs/Hulk.png",
+    matched: false,
+  },
+  {
+    src: "http://OshriTzagay.github.io/Memory-Game/marvel_imgs/Ironman.png",
+    matched: false,
+  },
+  {
+    src: "http://OshriTzagay.github.io/Memory-Game/marvel_imgs/CaptainAmerica2.png",
+    matched: false,
+  },
+  {
+    src: "http://OshriTzagay.github.io/Memory-Game/marvel_imgs/Flash.png",
+    matched: false,
+  },
+  {
+    src: "http://OshriTzagay.github.io/Memory-Game/marvel_imgs/Deadpool.png",
+    matched: false,
+  },
 ];
 
 //!
 function MemoGame() {
-
-  const cardsRef =useRef(null)
+  const cardsRef = useRef(null);
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
   const [choiceOne, setChoiceOne] = useState(null);
@@ -33,8 +50,7 @@ function MemoGame() {
 
     setCards(shuffledCards);
     setTurns(0);
-    cardsRef.current.scrollIntoView({ behavior: "smooth" })
-
+    cardsRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   //handle the choice.
@@ -61,7 +77,6 @@ function MemoGame() {
         setTimeout(() => resetTurns(), 1000);
       }
     }
-    
   }, [choiceOne, choiceTwo]);
 
   console.log(cards);
@@ -101,13 +116,15 @@ function MemoGame() {
       </nav>
       <h1 className="the-title">Memory Game</h1>
       <p>You must complete this in less than 10 MOVES & 5Minutes </p>
-        {/* <StopWatch className="moves"/> */}
+      {/* <StopWatch className="moves"/> */}
       <div className="movesContainer">
         <h1 className="moves">Moves : {turns}</h1>
         {/* <h1 className="moves"> Timer  {minutes}:{seconds}</h1> */}
-        <StopWatch/>
+        <StopWatch />
       </div>
-      <button className="start-btn" herf="#cards" onClick={shuffleCards}>New Game</button>
+      <button className="start-btn" herf="#cards" onClick={shuffleCards}>
+        New Game
+      </button>
 
       <div ref={cardsRef} className="card-grid" id="cards">
         {cards.map((card) => (
